@@ -7,9 +7,27 @@
 </head>
 <body>
     <h1>JavaScript Module Example</h1>
-    
-    <script src="./javascript/task-5.js"></script>
+    <ul>
+        <li><a href="#" onclick="loadScript('./javascript/task-1.js')">Task 1</a></li>
+        <li><a href="#" onclick="loadScript('./javascript/task-2.js')">Task 2</a></li>
+        <li><a href="#" onclick="loadScript('./javascript/task-3.js')">Task 3</a></li>
+        <li><a href="#" onclick="loadScript('./javascript/task-4.js')">Task 4</a></li>
+        <li><a href="#" onclick="loadScript('./javascript/task-5.js')">Task 5</a></li>
+        <li><a href="#" onclick="loadScript('./javascript/task-6.js')">Task 6</a></li>
+        <li><a href="#" onclick="loadScript('./javascript/task-7.js')">Task 7</a></li>
+        <li><a href="#" onclick="loadScript('./javascript/task-8.js')">Task 8</a></li>
+        <li><a href="#" onclick="loadScript('./javascript/task-9.js')">Task 9</a></li>
+        <li><a href="#" onclick="loadScript('./javascript/task-10.js')">Task 10</a></li>
+    </ul>
 
+    <script>
+        function loadScript(src) {
+            const script = document.createElement('script');// Створює новий елемент <script>
+            script.type = 'module';// Встановлює тип скрипту як 'module', що дозволяє використовувати модулі ES6
+            script.src = src; // Встановлює атрибут src для елемента <script>, вказуючи шлях до скрипту
+            document.body.appendChild(script);// Додає створений елемент <script> в кінець тіла документа, що викликає його завантаження та виконання
+        }
+    </script>
 
 </body>
 </html>
